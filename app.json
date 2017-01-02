@@ -11,7 +11,7 @@
     "MAILER_SENDER": "no-reply@nearmotion.com",
     "REGISTRATION_MAILER_SENDER": "no-reply@nearmotion.com",
     "SYSTEM_MAILER_RECEIVER": "no-reply@nearmotion.com",
-    "COUPON_URL": "http://control.nearmotion.com",
+    "COUPON_URL": "control.nearmotion.com",
     "MAILER_HOST": ""
   },
   "scripts": {
