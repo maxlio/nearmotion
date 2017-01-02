@@ -2,7 +2,7 @@
   "name": "BeaconCtrl",
   "description": "Setup and manage even large beacon deployments with BeaconControl - our open source platform",
   "repository": "https://github.com/upnext/BeaconControl",
-  "website": "https://beaconcontrol.io/",
+  "website": "http://control.nearmotion.com/",
   "logo": "https://admin.beaconcontrol.io/logo.svg",
   "env": {
     "RAILS_ENV": "production",
@@ -11,7 +11,7 @@
     "MAILER_SENDER": "no-reply@beaconctrl.com",
     "REGISTRATION_MAILER_SENDER": "no-reply@beaconctrl.com",
     "SYSTEM_MAILER_RECEIVER": "no-reply@beaconctrl.com",
-    "COUPON_URL": "",
+    "COUPON_URL": "http://control.nearmotion.com",
     "MAILER_HOST": ""
   },
   "scripts": {
