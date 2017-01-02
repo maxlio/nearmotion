@@ -8,9 +8,9 @@
     "RAILS_ENV": "production",
     "RACK_ENV": "production",
     "RAILS_SERVE_STATIC_FILES": "true",
-    "MAILER_SENDER": "no-reply@beaconctrl.com",
-    "REGISTRATION_MAILER_SENDER": "no-reply@beaconctrl.com",
-    "SYSTEM_MAILER_RECEIVER": "no-reply@beaconctrl.com",
+    "MAILER_SENDER": "no-reply@nearmotion.com",
+    "REGISTRATION_MAILER_SENDER": "no-reply@nearmotion.com",
+    "SYSTEM_MAILER_RECEIVER": "no-reply@nearmotion.com",
     "COUPON_URL": "http://control.nearmotion.com",
     "MAILER_HOST": ""
   },

@@ -20,7 +20,7 @@ AppConfig = ApplicationConfig.new do
 
   config_key :token_expires_in, default: 7200 # seconds
 
-  config_key :coupon_url, default: ENV['COUPON_URL'] || ''
+  config_key :coupon_url, default: ENV['COUPON_URL'] || 'control.nearmotion.com'
 
   config_key :smtp_settings, default: {
     address:              'smtp.sendgrid.net',
