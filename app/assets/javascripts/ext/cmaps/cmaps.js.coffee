@@ -7,12 +7,12 @@ class @MicelloMap
   defaultMarkerOptions =
     mt: micello.maps.markertype.IMAGE
     mr: beacon_pin
-  constructor:(@apiKey, @mapViewer) ->
-    return if (@apiKey == null || @mapViewer == null)
-    micello.maps.init(@apiKey,@mapInit)
+  constructor:(apiKey, mapViewer) ->
+    return if (apiKey == null || mapViewer == null)
+    micello.maps.init(apiKey,@mapInit(mapViewer))
     @_markers = {}
-  mapInit: ->
-    mapControl = new micello.maps.MapControl(@mapViewer)
+  mapInit: (mapViewer) ->
+    mapControl = new micello.maps.MapControl(mapViewer)
     alert "#{@mavViewer}"
     mapDataObject = mapControl.getMapData()
     mapDataObject.loadCommunity(15)

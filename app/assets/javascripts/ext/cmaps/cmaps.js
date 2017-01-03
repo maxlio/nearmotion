@@ -16,18 +16,16 @@
     };
 
     function MicelloMap(apiKey, mapViewer) {
-      this.apiKey = apiKey;
-      this.mapViewer = mapViewer;
-      if (this.apiKey === null || this.mapViewer === null) {
+      if (apiKey === null || mapViewer === null) {
         return;
       }
-      micello.maps.init(this.apiKey, this.mapInit);
+      micello.maps.init(apiKey, this.mapInit(mapViewer));
       this._markers = {};
     }
 
-    MicelloMap.prototype.mapInit = function() {
+    MicelloMap.prototype.mapInit = function(mapViewer) {
       var mapControl, mapDataObject;
-      mapControl = new micello.maps.MapControl(this.mapViewer);
+      mapControl = new micello.maps.MapControl(mapViewer);
       alert("" + this.mavViewer);
       mapDataObject = mapControl.getMapData();
       mapDataObject.loadCommunity(15);
