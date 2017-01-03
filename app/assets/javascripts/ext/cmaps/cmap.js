@@ -26,7 +26,7 @@
     MicelloMap.prototype.mapInit = function(mapViewer) {
       var mapControl, mapDataObject;
       mapControl = new micello.maps.MapControl(mapViewer);
-      alert("" + this.mavViewer);
+      alert("" + mavViewer);
       mapDataObject = mapControl.getMapData();
       mapDataObject.loadCommunity(15);
       return this.map = mapDataObject;
