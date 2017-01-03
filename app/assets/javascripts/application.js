@@ -32,6 +32,7 @@
 //= require ext/spectrum
 //= require ext/fontawesome-markers.min
 //= require ext/promise
+//=require  ext/cmaps
 //
 // ### Bootstrap extensions
 //= require ext_bootstrap/bootstrap-slider

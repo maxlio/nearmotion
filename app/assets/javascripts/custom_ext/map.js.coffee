@@ -1,5 +1,6 @@
 #= require ext/gmaps/exports
 #= require ext/gmaps/gmaps
+#= require ext/cmaps/cmaps
 
 ###
  Copyright (c) 2015, Upnext Technologies Sp. z o.o.
