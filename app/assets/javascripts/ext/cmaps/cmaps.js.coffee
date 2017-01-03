@@ -5,8 +5,8 @@ class @MicelloMap
   defaultMapOptions = 
     lid : null
   defaultMarkerOptions =
-    markerType: micello.maps.markertype.IMAGE
-    markerRef: beacon_pin
+    mt: micello.maps.markertype.IMAGE
+    mr: beacon_pin
   constructor:(@apiKey, @mapViewer) ->
     return if (@apiKey == null || @mapViewer == null)
     micello.maps.init(@apiKey,@mapInit)

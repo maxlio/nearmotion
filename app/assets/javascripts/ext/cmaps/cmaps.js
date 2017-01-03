@@ -11,8 +11,8 @@
     };
 
     defaultMarkerOptions = {
-      markerType: micello.maps.markertype.IMAGE,
-      markerRef: beacon_pin
+      mt: micello.maps.markertype.IMAGE,
+      mr: beacon_pin
     };
 
     function MicelloMap(apiKey, mapViewer) {
