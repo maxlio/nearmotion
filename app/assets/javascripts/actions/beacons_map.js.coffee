@@ -15,7 +15,7 @@ $ ->
       onColor: 'primary'
       size: 'small'
 
-    map = new BeaconsMap('.map-view', '#beacons-map')
+    map = new MicelloMap('rrVDMQe2qjBRuJP5dXv59kAeK77SD7','#beacons-map')
 
     paramsMapper = new ParamsMapper('.map-view')
 
