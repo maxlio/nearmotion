@@ -13,6 +13,7 @@ class @MicelloMap
     @_markers = {}
   mapInit: ->
     mapControl = new micello.maps.MapControl(@mapViewer)
+    alert "#{@mavViewer}"
     mapDataObject = mapControl.getMapData()
     mapDataObject.loadCommunity(15)
     @map = mapDataObject
