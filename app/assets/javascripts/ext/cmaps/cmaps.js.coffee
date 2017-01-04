@@ -4,7 +4,7 @@ class @MicelloMap
   defaultMapOptions = 
     lid : null 
   constructor:(apikey,mapContainer) ->
-    return if (apiKey == '' || mapContainer == '')
+    return if (apikey == '' || mapContainer == '')
     @mapViewer = mapContainer
     @ApiKey = apikey
     console.log @mapViewer
