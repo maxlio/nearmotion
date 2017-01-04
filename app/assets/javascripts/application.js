@@ -44,7 +44,7 @@
 //
 // ### Custom etensions
 //= require custom_ext/map
-//=require  ext/cmaps/cmaps
+//= require  ext/cmaps/cmaps
 //= require custom_ext/elements_select
 //= require custom_ext/handlebars
 //= require custom_ext/walkthrough
