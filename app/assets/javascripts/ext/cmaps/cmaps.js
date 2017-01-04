@@ -22,8 +22,7 @@
       console.log(sys.inspect(this.mapViewer));
       console.log(sys.inspect(this.apiKey));
       mapDataObject = mapControl.getMapData();
-      mapDataObject.loadCommunity(24657);
-      return this.map = mapDataObject;
+      return mapDataObject.loadCommunity(24657);
     };
 
     MicelloMap.prototype.currentLevel = function(mapObject) {

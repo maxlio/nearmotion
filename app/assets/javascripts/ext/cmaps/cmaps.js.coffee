@@ -11,7 +11,6 @@ class @MicelloMap
     console.log sys.inspect @apiKey 
     mapDataObject = mapControl.getMapData()
     mapDataObject.loadCommunity(24657)
-    @map = mapDataObject
   currentLevel:(mapObject) ->
     mapObject.getCurrentLevel()
   addMarker: (markerId, posX, posY, lid, options) ->
