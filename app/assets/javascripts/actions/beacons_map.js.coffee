@@ -33,5 +33,5 @@ $ ->
     eventHandler.addEvent('#beacon_floor', 'change')
     eventHandler.addEvent('#beacon_name', 'change keyup')
     eventHandler.addEvent('.map-view-sidebar input:checkbox', 'switchChange.bootstrapSwitch')
-    eventHandler.addOberver(fetcher)
+#    eventHandler.addOberver(fetcher)
     map = new MicelloMap('rrVDMQe2qjBRuJP5dXv59kAeK77SD7','beacons-map')
