@@ -6,12 +6,13 @@ class @MicelloMap
   constructor:(mapContainer) ->
     return if (@apiKey == null || mapContainer == '')
     @mapViewer = mapContainer
+    console.log @mapViewer
+    console.log @apiKey
     micello.maps.init(@apiKey,@mapInit)
     @_markers = {}
   mapInit: ->
     mapControl = new micello.maps.MapControl(@mapViewer)
-    console.log @mapViewer
-    console.log @apiKey 
+ 
     mapDataObject = mapControl.getMapData()
     mapDataObject.loadCommunity(24657)
   currentLevel:(mapObject) ->
