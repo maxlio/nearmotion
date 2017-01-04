@@ -8,8 +8,8 @@ class @MicelloMap
     @mapViewer = mapContainer
     @ApiKey = apikey
     console.log @mapViewer
-    console.log @apiKey
-    micello.maps.init(@apiKey,@mapInit)
+    console.log @ApiKey
+    micello.maps.init(@ApiKey,@mapInit)
     @_markers = {}
   mapInit: ->
     mapControl = new micello.maps.MapControl(@mapViewer)
