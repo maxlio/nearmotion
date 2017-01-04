@@ -1,18 +1,16 @@
 class @MicelloMap
-  @beacon_pin ={
-    src:"beacon_pin.png"
-    }
   defaultMapOptions = 
     lid : null 
-  constructor:(apiKey, mapViewer) ->
-    return if (apiKey == null || mapViewer == null)
-    micello.maps.init(apiKey,@mapInit(mapViewer))
+  constructor:(@apiKey, @mapViewer) ->
+    return if (@apiKey == null || @mapViewer == null)
+    micello.maps.init(@apiKey,@mapInit)
     @_markers = {}
-  mapInit: (mapViewer) ->
-    mapControl = new micello.maps.MapControl(mapViewer)
-    alert "#{mavViewer}"
+  mapInit: ->
+    mapControl = new micello.maps.MapControl(@mapViewer)
+    console.log "#{@mapViewer}"
+    console.log "#{@apiKey}"
     mapDataObject = mapControl.getMapData()
-    mapDataObject.loadCommunity(15)
+    mapDataObject.loadCommunity(24657)
     @map = mapDataObject
   currentLevel:(mapObject) ->
     mapObject.getCurrentLevel()

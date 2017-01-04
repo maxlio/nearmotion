@@ -2,28 +2,27 @@
   this.MicelloMap = (function() {
     var defaultMapOptions;
 
-    MicelloMap.beacon_pin = {
-      src: "beacon_pin.png"
-    };
-
     defaultMapOptions = {
       lid: null
     };
 
     function MicelloMap(apiKey, mapViewer) {
-      if (apiKey === null || mapViewer === null) {
+      this.apiKey = apiKey;
+      this.mapViewer = mapViewer;
+      if (this.apiKey === null || this.mapViewer === null) {
         return;
       }
-      micello.maps.init(apiKey, this.mapInit(mapViewer));
+      micello.maps.init(this.apiKey, this.mapInit);
       this._markers = {};
     }
 
-    MicelloMap.prototype.mapInit = function(mapViewer) {
+    MicelloMap.prototype.mapInit = function() {
       var mapControl, mapDataObject;
-      mapControl = new micello.maps.MapControl(mapViewer);
-      alert("" + mavViewer);
+      mapControl = new micello.maps.MapControl(this.mapViewer);
+      console.log("" + this.mapViewer);
+      console.log("" + this.apiKey);
       mapDataObject = mapControl.getMapData();
-      mapDataObject.loadCommunity(15);
+      mapDataObject.loadCommunity(24657);
       return this.map = mapDataObject;
     };
 
