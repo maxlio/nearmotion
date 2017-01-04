@@ -26,13 +26,12 @@ $ ->
       window.history.replaceState(null, null, "#{window.location.pathname}?#{$.param(values)}")
     )
 
-    fetcher = new BeaconListFetcher('/beacons_search', paramsMapper, map.setBeacons.bind(map))
-    fetcher.fetch(true)
+#    fetcher = new BeaconListFetcher('/beacons_search', paramsMapper, map.setBeacons.bind(map))
+#    fetcher.fetch(true)
 
     eventHandler = new EventHandler()
     eventHandler.addEvent('#beacon_floor', 'change')
     eventHandler.addEvent('#beacon_name', 'change keyup')
     eventHandler.addEvent('.map-view-sidebar input:checkbox', 'switchChange.bootstrapSwitch')
     eventHandler.addOberver(fetcher)
-    if $("#beacons-map").length > 0   
-      map = new MicelloMap('rrVDMQe2qjBRuJP5dXv59kAeK77SD7','beacons-map')
+    map = new MicelloMap('rrVDMQe2qjBRuJP5dXv59kAeK77SD7','beacons-map')
