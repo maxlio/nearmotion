@@ -14,8 +14,7 @@ $ ->
       handleWith: 60
       onColor: 'primary'
       size: 'small'
-  if $("#beacons-map").length > 0   
-    map = new MicelloMap('rrVDMQe2qjBRuJP5dXv59kAeK77SD7','beacons-map')
+  
 
     paramsMapper = new ParamsMapper('.map-view')
 
@@ -35,3 +34,5 @@ $ ->
     eventHandler.addEvent('#beacon_name', 'change keyup')
     eventHandler.addEvent('.map-view-sidebar input:checkbox', 'switchChange.bootstrapSwitch')
     eventHandler.addOberver(fetcher)
+    if $("#beacons-map").length > 0   
+      map = new MicelloMap('rrVDMQe2qjBRuJP5dXv59kAeK77SD7','beacons-map')
