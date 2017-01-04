@@ -1,11 +1,12 @@
 class @MicelloMap
-  @ApiKey = 'rrVDMQe2qjBRuJP5dXv59kAeK77SD7'
+  @ApiKey = ''
   @mapViewer = ''
   defaultMapOptions = 
     lid : null 
-  constructor:(mapContainer) ->
-    return if (@apiKey == null || mapContainer == '')
+  constructor:(apikey,mapContainer) ->
+    return if (@apiKey == '' || mapContainer == '')
     @mapViewer = mapContainer
+    @ApiKey = apikey
     console.log @mapViewer
     console.log @apiKey
     micello.maps.init(@apiKey,@mapInit)
