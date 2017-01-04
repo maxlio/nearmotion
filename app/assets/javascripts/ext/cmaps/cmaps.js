@@ -16,8 +16,6 @@
       }
       this.mapViewer = mapContainer;
       this.ApiKey = apikey;
-      console.log(this.mapViewer);
-      console.log(this.ApiKey);
       micello.maps.init(this.ApiKey, this.mapInit);
       this._markers = {};
     }
