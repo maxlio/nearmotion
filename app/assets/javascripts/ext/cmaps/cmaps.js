@@ -19,8 +19,8 @@
     MicelloMap.prototype.mapInit = function() {
       var mapControl, mapDataObject;
       mapControl = new micello.maps.MapControl(this.mapViewer);
-      console.log(sys.inspect(this.mapViewer));
-      console.log(sys.inspect(this.apiKey));
+      console.log(this.mapViewer);
+      console.log(this.apiKey);
       mapDataObject = mapControl.getMapData();
       return mapDataObject.loadCommunity(24657);
     };

@@ -7,8 +7,8 @@ class @MicelloMap
     @_markers = {}
   mapInit: ->
     mapControl = new micello.maps.MapControl(@mapViewer)
-    console.log sys.inspect @mapViewer
-    console.log sys.inspect @apiKey 
+    console.log @mapViewer
+    console.log @apiKey 
     mapDataObject = mapControl.getMapData()
     mapDataObject.loadCommunity(24657)
   currentLevel:(mapObject) ->
