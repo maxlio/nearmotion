@@ -1,8 +1,10 @@
 class @MicelloMap
+  @ApiKey = 'rrVDMQe2qjBRuJP5dXv59kAeK77SD7'
+  @mapViewer = ''
   defaultMapOptions = 
     lid : null 
-  constructor:(@apiKey, @mapViewer) ->
-    return if (@apiKey == null || @mapViewer == null)
+  constructor:(@mapViewer) ->
+    return if (@apiKey == null || @mapViewer == '')
     micello.maps.init(@apiKey,@mapInit)
     @_markers = {}
   mapInit: ->

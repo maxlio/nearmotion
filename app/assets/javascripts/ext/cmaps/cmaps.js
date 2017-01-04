@@ -2,14 +2,17 @@
   this.MicelloMap = (function() {
     var defaultMapOptions;
 
+    MicelloMap.ApiKey = 'rrVDMQe2qjBRuJP5dXv59kAeK77SD7';
+
+    MicelloMap.mapViewer = '';
+
     defaultMapOptions = {
       lid: null
     };
 
-    function MicelloMap(apiKey, mapViewer) {
-      this.apiKey = apiKey;
+    function MicelloMap(mapViewer) {
       this.mapViewer = mapViewer;
-      if (this.apiKey === null || this.mapViewer === null) {
+      if (this.apiKey === null || this.mapViewer === '') {
         return;
       }
       micello.maps.init(this.apiKey, this.mapInit);
