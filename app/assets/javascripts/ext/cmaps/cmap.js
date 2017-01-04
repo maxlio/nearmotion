@@ -1,18 +1,13 @@
 (function() {
   this.MicelloMap = (function() {
-    var beacon_pin, defaultMapOptions, defaultMarkerOptions;
+    var defaultMapOptions;
 
-    beacon_pin = {
+    MicelloMap.beacon_pin = {
       src: "beacon_pin.png"
     };
 
     defaultMapOptions = {
       lid: null
-    };
-
-    defaultMarkerOptions = {
-      mt: micello.maps.markertype.IMAGE,
-      mr: beacon_pin
     };
 
     function MicelloMap(apiKey, mapViewer) {
@@ -48,6 +43,8 @@
       defaultMapOptions.lid = thislevel.id;
       options = exports.merge(defaultMarkerOptions, options || {});
       markerSettings = exports.merge(options, {
+        mt: micello.maps.markertype.IMAGE,
+        mr: this.beacon_pin,
         mx: posX,
         my: posY,
         lid: lid || defaultMapOptions.lid

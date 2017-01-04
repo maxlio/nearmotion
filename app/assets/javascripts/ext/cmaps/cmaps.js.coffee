@@ -1,12 +1,9 @@
 class @MicelloMap
-  beacon_pin ={
+  @beacon_pin ={
     src:"beacon_pin.png"
     }
   defaultMapOptions = 
-    lid : null
-  defaultMarkerOptions =
-    mt: micello.maps.markertype.IMAGE
-    mr: beacon_pin
+    lid : null 
   constructor:(apiKey, mapViewer) ->
     return if (apiKey == null || mapViewer == null)
     micello.maps.init(apiKey,@mapInit(mapViewer))
@@ -26,7 +23,8 @@ class @MicelloMap
     defaultMapOptions.lid = thislevel.id
     options = exports.merge( defaultMarkerOptions, (options || {}) )
     markerSettings  = exports.merge( options, {
-      
+      mt: micello.maps.markertype.IMAGE
+      mr: @beacon_pin
       mx: posX,
       my: posY
       lid:(lid || defaultMapOptions.lid)
