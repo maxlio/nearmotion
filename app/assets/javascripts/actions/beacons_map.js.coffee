@@ -6,6 +6,8 @@
  LICENSE.txt file in the root directory of this source tree. 
 ###
 
-$ ->
+ready =  ->
   if $("#beacons-map").length > 0 
-    map = new MicelloMap('rrVDMQe2qjBRuJP5dXv59kAeK77SD7','beacons-map')   
+    map = new MicelloMap('rrVDMQe2qjBRuJP5dXv59kAeK77SD7','beacons-map')  
+$(document).ready(ready)
+$(document).on('page:load',ready)
