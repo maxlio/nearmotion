@@ -3,8 +3,9 @@ class @MicelloMap
   @mapViewer = ''
   defaultMapOptions = 
     lid : null 
-  constructor:(@mapViewer) ->
-    return if (@apiKey == null || @mapViewer == '')
+  constructor:(mapContainer) ->
+    return if (@apiKey == null || mapContainer == '')
+    @mapViewer = mapContainer
     micello.maps.init(@apiKey,@mapInit)
     @_markers = {}
   mapInit: ->

@@ -10,11 +10,11 @@
       lid: null
     };
 
-    function MicelloMap(mapViewer) {
-      this.mapViewer = mapViewer;
-      if (this.apiKey === null || this.mapViewer === '') {
+    function MicelloMap(mapContainer) {
+      if (this.apiKey === null || mapContainer === '') {
         return;
       }
+      this.mapViewer = mapContainer;
       micello.maps.init(this.apiKey, this.mapInit);
       this._markers = {};
     }
