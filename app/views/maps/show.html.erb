@@ -72,5 +72,12 @@
     </div>
   <% end %>
 </div>
-
+  <script>
+micello.maps.init("rrVDMQe2qjBRuJP5dXv59kAeK77SD7",mapInit);
+function  mapInit()  {
+var  mapControl  =  new  micello.maps.MapControl('beacons-map');
+var  mapDataObject  =  mapControl.getMapData();
+//  Finally,  load  the  map:
+mapDataObject.loadCommunity(24657);
+  </script>
 <%= prompt_modal(t('maps.modal.title'), t('maps.modal.body')) %>
