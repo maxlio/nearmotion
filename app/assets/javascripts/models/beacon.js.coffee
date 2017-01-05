@@ -23,7 +23,7 @@ class @Beacon
 #      zoomControlOpt:
 #        position: 'RIGHT_BOTTOM'
 #    )
-     @map = new MicelloMap('rrVDMQe2qjBRuJP5dXv59kAeK77SD7','beacons-map')
+     @map = new MicelloMap('rrVDMQe2qjBRuJP5dXv59kAeK77SD7',@mapDom)
 
   isActive: ->
     @map != null
