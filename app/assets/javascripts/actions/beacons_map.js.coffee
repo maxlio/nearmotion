@@ -6,7 +6,7 @@
  LICENSE.txt file in the root directory of this source tree. 
 ###
 
-$(window).laod ->
+$(window).load ->
   if $('.map-view').length > 0
     $('.map-view input:checkbox').bootstrapSwitch
       animate: false
