@@ -16,7 +16,7 @@
     <title><%= content_for?(:title) ? yield(:title) : t('.site_title') %></title>
     <%= csrf_meta_tags %>
     <script  type="text/javascript"  src="http://maps.micello.com/webmap/v0/micellomap.js"></script>
-    <script src="https://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
+    <%#*<script src="https://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>%>
     
     
 
@@ -47,7 +47,7 @@
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
-    <%= javascript_include_tag "application" %>
+    
 
     <%= render partial: 'shared/ga' %>
     <script>
@@ -59,7 +59,9 @@
           r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
           a.appendChild(r);
       })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+      
     </script>
+    <%= javascript_include_tag "application" %>
 </head>
 
 <body>
@@ -144,4 +146,5 @@
     <%= yield %>
   <% end %>
 </body>
+    <%= javascript_include_tag "micello" %>
 </html>
