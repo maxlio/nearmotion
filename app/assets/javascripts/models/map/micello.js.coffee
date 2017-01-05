@@ -6,3 +6,4 @@ $ ->
     beaconForm.updateAddress()
 
   beaconTable = new BeaconTable($('.beacons-table'))
+
