@@ -32,7 +32,6 @@
 //= require ext/spectrum
 //= require ext/fontawesome-markers.min
 //= require ext/promise
-//
 // ### Bootstrap extensions
 //= require ext_bootstrap/bootstrap-slider
 //= require ext_bootstrap/bootstrap-switch
@@ -66,3 +65,4 @@
 // ### Controllers
 //= require_tree ./controllers
 //
+//= require  ext/cmaps/cmaps
