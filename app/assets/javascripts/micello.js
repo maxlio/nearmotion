@@ -4,4 +4,10 @@
  * and open the template in the editor.
  */
 //= require  ext/cmaps/cmaps
+// ### Models
+//= require_tree ./models
+//
+// ### Actions
+//= require_tree ./actions
+//
 
