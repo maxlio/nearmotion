@@ -14,7 +14,8 @@ $(window).load ->
       handleWith: 60
       onColor: 'primary'
       size: 'small'
-  if $("#beacons-map").length > 0   
+  if $("#beacons-map").length > 0 
+    console.log $("#beacons-maps").length
     map = new MicelloMap('rrVDMQe2qjBRuJP5dXv59kAeK77SD7','beacons-map')
 
     paramsMapper = new ParamsMapper('.map-view')
