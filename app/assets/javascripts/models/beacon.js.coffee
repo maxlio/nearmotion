@@ -19,10 +19,11 @@ class @Beacon
     @setupWatcher()
 
   createMap: ->
-    @map = new Map(@mapDom,
-      zoomControlOpt:
-        position: 'RIGHT_BOTTOM'
-    )
+#    @map = new Map(@mapDom,
+#      zoomControlOpt:
+#        position: 'RIGHT_BOTTOM'
+#    )
+     @map = new MicelloMap('rrVDMQe2qjBRuJP5dXv59kAeK77SD7','beacons-map')
 
   isActive: ->
     @map != null
