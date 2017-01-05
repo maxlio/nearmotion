@@ -6,7 +6,7 @@
  LICENSE.txt file in the root directory of this source tree. 
 ###
 
-$(window).load ->
+$(document).ready ->
   if $('.map-view').length > 0
     $('.map-view input:checkbox').bootstrapSwitch
       animate: false
@@ -14,8 +14,8 @@ $(window).load ->
       handleWith: 60
       onColor: 'primary'
       size: 'small'
-#    if $("#beacons-map").length > 0 
-#      map = new MicelloMap('rrVDMQe2qjBRuJP5dXv59kAeK77SD7','beacons-map')
+  if $("#beacons-map").length > 0 
+    map = new MicelloMap('rrVDMQe2qjBRuJP5dXv59kAeK77SD7','beacons-map')
 
     paramsMapper = new ParamsMapper('.map-view')
 
