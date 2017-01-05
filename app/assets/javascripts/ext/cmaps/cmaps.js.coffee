@@ -12,7 +12,6 @@ class @MicelloMap
   mapInit: ->
     mapControl = new micello.maps.MapControl(@mapViewer)
     mapDataObject = mapControl.getMapData()
-    mapDataObject.loadCommunity(24657)
   currentLevel:(mapObject) ->
     mapObject.getCurrentLevel()
   addMarker: (markerId, posX, posY, lid, options) ->

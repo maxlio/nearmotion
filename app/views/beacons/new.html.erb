@@ -10,5 +10,7 @@
   <span><%= link_to t('.title'), beacons_path %></span>
   <span><%= t('.action') %></span>
 <% end %>
-
+  <script>
+    mapDataObject.loadCommunity(24657);
+  </script>
 <%= render partial: 'form' %>
