@@ -33,13 +33,16 @@
       var marker, markersetting, thislevel;
       thislevel = this.currentLevel();
       console.log(thislevel);
-      markersetting = this.markerstruct;
+      markersetting = {
+      "mt": type,
+      "mr": "BluePin",
+      "mx": posX,
+      "my": posY,
+      "lid": lid,
+      "idat": beacon_name,
+      "anm": "Pins"
+    };
       console.log(markersetting);
-      markersetting.lid = thislevel.id;
-      markersetting.mt = type;
-      markersetting.mx = posX;
-      markersetting.my = posY;
-      markersetting.idat = beacon_name;
       return marker = this.mapObj.addMarkerOverlay(markersetting);
     };
 
