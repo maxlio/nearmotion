@@ -8,7 +8,7 @@
 
     micelloHelper.markerstruct = {
       "mt": null,
-      "mr": BluePin,
+      "mr": "BluePin",
       "mx": null,
       "my": null,
       "lid": null,
