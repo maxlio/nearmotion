@@ -2,7 +2,7 @@ class @micelloHelper
   @mapObj
   @_markers = {}
   @markerstruct = {
-      "mt": micello.maps.markertype.NAMED,
+      "mt": null,
       "mr": BluePin,
       "mx": null,
       "my": null,
@@ -16,12 +16,13 @@ class @micelloHelper
   @currentLevel ->
     return if @mapObj == null
     currentlevel = @mapObj.getCurrentLevel()
-  @addMarker(markerId, posX, posY, lid,beacon_name) ->
+  @addMarker(markerId, posX, posY, lid,beacon_name,type) ->
     return if markerId == undefined
     return if @_markers[markerId] != undefined
     thislevel = @currentLevel()
     markersetting = @markerstruct
     markersetting.lid = thislevel.id
+    markersetting.mt = type
     markersetting.mx = posX
     markersetting.my = posY
     markersetting.idat = beacon_name

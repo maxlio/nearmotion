@@ -7,7 +7,7 @@
     micelloHelper._markers = {};
 
     micelloHelper.markerstruct = {
-      "mt": micello.maps.markertype.NAMED,
+      "mt": null,
       "mr": BluePin,
       "mx": null,
       "my": null,
@@ -31,7 +31,7 @@
       return currentlevel = this.mapObj.getCurrentLevel();
     });
 
-    micelloHelper.addMarker(markerId, posX, posY, lid, beacon_name)(function() {
+    micelloHelper.addMarker(markerId, posX, posY, lid, beacon_name, type)(function() {
       var marker, markersetting, thislevel;
       if (markerId === void 0) {
         return;
@@ -42,6 +42,7 @@
       thislevel = this.currentLevel();
       markersetting = this.markerstruct;
       markersetting.lid = thislevel.id;
+      markersetting.mt = type;
       markersetting.mx = posX;
       markersetting.my = posY;
       markersetting.idat = beacon_name;
