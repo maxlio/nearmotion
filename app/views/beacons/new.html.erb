@@ -15,6 +15,8 @@ micello.maps.init("rrVDMQe2qjBRuJP5dXv59kAeK77SD7",mapInit);
 function  mapInit()  {
 var  mapControl  =  new  micello.maps.MapControl('beacon-map');
 window.mapDataObject  =  mapControl.getMapData();
+ mapObject = new micelloHelper(mapDataObject);
+ console.log(mapObject);
 //  Finally,  load  the  map:
 mapDataObject.loadCommunity(24657);
 }
