@@ -22,7 +22,7 @@ $ ->
     paramsMapper.mapArray('zone_id', 'input[name="beacon[zone_id][]"]:checked')
     paramsMapper.map('name',  'input[name="beacon[name]"]')
     paramsMapper.map('floor', 'select[name="beacon[floor]"]')
-
+    
     $(paramsMapper).on('paramsChanged', (e, values) ->
       window.history.replaceState(null, null, "#{window.location.pathname}?#{$.param(values)}")
     )
