@@ -21,6 +21,8 @@ mapControl.onMapClick = onMapClicked;
             if(mx && my){
               var lid =  mapObject.currentLevel();
               mapObject.addMarker(mx,my,lid.id,"test",micello.maps.markertype.NAMED);
+              $("#beacon_lat").val(mx);
+              $("#beacon_lng").val(my);
             }
         }
 //  Finally,  load  the  map:
