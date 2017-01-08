@@ -32,7 +32,9 @@
     micelloHelper.prototype.addMarker = function(posX, posY, lid, beacon_name, type) {
       var marker, markersetting, thislevel;
       thislevel = this.currentLevel();
+      console.log(thislevel);
       markersetting = this.markerstruct;
+      console.log(markersetting);
       markersetting.lid = thislevel.id;
       markersetting.mt = type;
       markersetting.mx = posX;
