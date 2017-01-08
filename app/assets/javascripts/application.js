@@ -47,6 +47,7 @@
 //= require custom_ext/walkthrough
 //= require custom_ext/sidebar_highlighter
 //= require custom_ext/sticky_element
+//= require custom_ext/micello_helper
 //
 // ### Handlebars templates
 //= require_tree ./templates
