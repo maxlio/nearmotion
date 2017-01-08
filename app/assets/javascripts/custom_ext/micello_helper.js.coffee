@@ -17,7 +17,7 @@ class @micelloHelper
     return if @mapObj == null
     currentlevel = @mapObj.getCurrentLevel()
   addMarker:(markerId, posX, posY, lid,beacon_name,type) ->
-    return if markerId == undefined
+    return if markerId == null
     return if @_markers[markerId] != undefined
     thislevel = @currentLevel()
     markersetting = @markerstruct

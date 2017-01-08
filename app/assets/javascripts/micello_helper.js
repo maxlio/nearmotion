@@ -31,7 +31,7 @@
 
     micelloHelper.prototype.addMarker = function(markerId, posX, posY, lid, beacon_name, type) {
       var marker, markersetting, thislevel;
-      if (markerId === void 0) {
+      if (markerId === null) {
         return;
       }
       if (this._markers[markerId] !== void 0) {
