@@ -16,7 +16,7 @@ class @micelloHelper
   currentLevel: ->
     return if @mapObj == null
     currentlevel = @mapObj.getCurrentLevel()
-  addMarker:(markerId, posX, posY, lid,beacon_name,type) ->
+  addMarker:(posX, posY, lid,beacon_name,type) ->
     thislevel = @currentLevel()
     markersetting = @markerstruct
     markersetting.lid = thislevel.id
