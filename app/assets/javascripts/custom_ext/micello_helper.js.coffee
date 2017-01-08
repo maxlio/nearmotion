@@ -10,13 +10,13 @@ class @micelloHelper
       "idat":'',
       "anm":"Pins"
       }
-  constructor (mapObj) ->
+  constructor: (mapObj) ->
     return if mapObj == null 
     @mapObj = mapObj
-  @currentLevel ->
+  currentLevel: ->
     return if @mapObj == null
     currentlevel = @mapObj.getCurrentLevel()
-  @addMarker(markerId, posX, posY, lid,beacon_name,type) ->
+  addMarker:(markerId, posX, posY, lid,beacon_name,type) ->
     return if markerId == undefined
     return if @_markers[markerId] != undefined
     thislevel = @currentLevel()
@@ -28,7 +28,7 @@ class @micelloHelper
     markersetting.idat = beacon_name
     marker = @mapObj.addMarkerOverlay(markersetting)
     @_markers[markerId] = marker
-  @clearAll ->
+  clearAll: ->
     return if @mapObj == null
     @mapObj.removeMarkerOverlay("Pins",true)
     

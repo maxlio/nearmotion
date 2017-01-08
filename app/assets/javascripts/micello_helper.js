@@ -1,7 +1,5 @@
 (function() {
   this.micelloHelper = (function() {
-    function micelloHelper() {}
-
     micelloHelper.mapObj;
 
     micelloHelper._markers = {};
@@ -16,22 +14,22 @@
       "anm": "Pins"
     };
 
-    constructor(function(mapObj) {
+    function micelloHelper(mapObj) {
       if (mapObj === null) {
         return;
       }
-      return this.mapObj = mapObj;
-    });
+      this.mapObj = mapObj;
+    }
 
-    micelloHelper.currentLevel(function() {
+    micelloHelper.prototype.currentLevel = function() {
       var currentlevel;
       if (this.mapObj === null) {
         return;
       }
       return currentlevel = this.mapObj.getCurrentLevel();
-    });
+    };
 
-    micelloHelper.addMarker(markerId, posX, posY, lid, beacon_name, type)(function() {
+    micelloHelper.prototype.addMarker = function(markerId, posX, posY, lid, beacon_name, type) {
       var marker, markersetting, thislevel;
       if (markerId === void 0) {
         return;
@@ -48,14 +46,14 @@
       markersetting.idat = beacon_name;
       marker = this.mapObj.addMarkerOverlay(markersetting);
       return this._markers[markerId] = marker;
-    });
+    };
 
-    micelloHelper.clearAll(function() {
+    micelloHelper.prototype.clearAll = function() {
       if (this.mapObj === null) {
         return;
       }
       return this.mapObj.removeMarkerOverlay("Pins", true);
-    });
+    };
 
     return micelloHelper;
 
