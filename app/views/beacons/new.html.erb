@@ -16,13 +16,11 @@ function  mapInit()  {
 var  mapControl  =  new  micello.maps.MapControl('beacon-map');
 window.mapDataObject  =  mapControl.getMapData();
  mapObject = new micelloHelper(mapDataObject);
- var count = 0;
 mapControl.onMapClick = onMapClicked;
         function onMapClicked(mx,my,clicked) {
             if(mx && my){
               var lid =  mapObject.currentLevel();
-              mapObject.addMarker(count,mx,my,lid,"test",micello.maps.markertype.NAMED);
-              count++;
+              mapObject.addMarker(0,mx,my,lid,"test",micello.maps.markertype.NAMED);
             }
         }
 //  Finally,  load  the  map:
