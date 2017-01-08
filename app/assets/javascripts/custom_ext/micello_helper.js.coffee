@@ -3,7 +3,7 @@ class @micelloHelper
   @_markers = {}
   @markerstruct = {
       "mt": null,
-      "mr": BluePin,
+      "mr": "BluePin",
       "mx": null,
       "my": null,
       "lid":null,
@@ -17,8 +17,6 @@ class @micelloHelper
     return if @mapObj == null
     currentlevel = @mapObj.getCurrentLevel()
   addMarker:(markerId, posX, posY, lid,beacon_name,type) ->
-    return if markerId == null
-    return if @_markers[markerId] != undefined
     thislevel = @currentLevel()
     markersetting = @markerstruct
     markersetting.lid = thislevel.id
@@ -27,7 +25,6 @@ class @micelloHelper
     markersetting.my = posY
     markersetting.idat = beacon_name
     marker = @mapObj.addMarkerOverlay(markersetting)
-    @_markers[markerId] = marker
   clearAll: ->
     return if @mapObj == null
     @mapObj.removeMarkerOverlay("Pins",true)
