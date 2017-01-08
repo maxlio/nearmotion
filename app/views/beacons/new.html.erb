@@ -10,6 +10,7 @@
   <span><%= link_to t('.title'), beacons_path %></span>
   <span><%= t('.action') %></span>
 <% end %>
+<%= javascript_include_tag "micelloHelper" %>
 <script>
 micello.maps.init("rrVDMQe2qjBRuJP5dXv59kAeK77SD7",mapInit);
 function  mapInit()  {
