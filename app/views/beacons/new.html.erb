@@ -16,7 +16,15 @@ function  mapInit()  {
 var  mapControl  =  new  micello.maps.MapControl('beacon-map');
 window.mapDataObject  =  mapControl.getMapData();
  mapObject = new micelloHelper(mapDataObject);
- console.log(mapObject);
+ var count = 0;
+mapControl.onMapClick = onMapClicked;
+        function onMapClicked(mx,my,clicked) {
+            if(mx && my){
+              var lid =  mapObject.currentLevel();
+              mapObject.addMarker(count,mx,my,lid,"test",micello.maps.markertype.NAMED);
+              count++;
+            }
+        }
 //  Finally,  load  the  map:
 mapDataObject.loadCommunity(24657);
 }
