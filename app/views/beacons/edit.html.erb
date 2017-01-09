@@ -17,11 +17,12 @@
     lng:<%= @beacon.lng %>,
     lat:<%= @beacon.lat %>
   }
+mapObject = null;
 micello.maps.init("rrVDMQe2qjBRuJP5dXv59kAeK77SD7",mapInit);
 function  mapInit()  {
 var  mapControl  =  new  micello.maps.MapControl('beacon-map');
 window.mapDataObject  =  mapControl.getMapData();
- window.mapObject = new micelloHelper(mapDataObject);
+mapObject = new micelloHelper(mapDataObject);
 mapControl.onMapClick = onMapClicked;
         function onMapClicked(mx,my,clicked) {
           var lid =  mapObject.currentLevel();
