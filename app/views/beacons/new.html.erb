@@ -18,8 +18,12 @@ window.mapDataObject  =  mapControl.getMapData();
  mapObject = new micelloHelper(mapDataObject);
 mapControl.onMapClick = onMapClicked;
         function onMapClicked(mx,my,clicked) {
+          var lid =  mapObject.currentLevel();
+              var currentMarkers = lid.m;
+              if(currentMarkers.length > 0){
+                mapObject.clearAll();
+              }
             if(mx && my){
-              var lid =  mapObject.currentLevel();
               mapObject.addMarker(mx,my,lid.id,"test",micello.maps.markertype.NAMED);
               $("#beacon_lat").val(mx);
               $("#beacon_lng").val(my);
