@@ -39,7 +39,7 @@ mapControl.onMapClick = onMapClicked;
 mapDataObject.loadCommunity(24657);
 }
  if(beacon !== undefined ){
-   mapObject =  mapObject.addMarker(beacon.lat,beacon.lng,mapObject.currentLevel().id,"test",micello.maps.markertype.NAMED);
+   mapObject.addMarker(beacon.lat,beacon.lng,mapObject.currentLevel().id,"test",micello.maps.markertype.NAMED);
  }
   </script>
 <%= render 'form' %>
