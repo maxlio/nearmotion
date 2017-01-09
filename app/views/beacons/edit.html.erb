@@ -22,12 +22,12 @@ function  mapInit()  {
 var  mapControl  =  new  micello.maps.MapControl('beacon-map');
 window.mapDataObject  =  mapControl.getMapData();
  mapObject = new micelloHelper(mapDataObject);
+ var lid =  mapObject.currentLevel();
  if(beacon !== undefined ){
    mapObject =  mapObject.addMarker(beacon.lat,beacon.lng,lid.id,"test",micello.maps.markertype.NAMED);
  }
 mapControl.onMapClick = onMapClicked;
         function onMapClicked(mx,my,clicked) {
-          var lid =  mapObject.currentLevel();
           var currentMarkers = mapObject.currentLevel().m;
               if(currentMarkers !== undefined){
                 mapObject.clearAll();
