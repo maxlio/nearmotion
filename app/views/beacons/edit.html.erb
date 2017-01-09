@@ -21,10 +21,7 @@ micello.maps.init("rrVDMQe2qjBRuJP5dXv59kAeK77SD7",mapInit);
 function  mapInit()  {
 var  mapControl  =  new  micello.maps.MapControl('beacon-map');
 window.mapDataObject  =  mapControl.getMapData();
- mapObject = new micelloHelper(mapDataObject);
- if(beacon !== undefined ){
-   mapObject =  mapObject.addMarker(beacon.lat,beacon.lng,mapObject.currentLevel().id,"test",micello.maps.markertype.NAMED);
- }
+ window.mapObject = new micelloHelper(mapDataObject);
 mapControl.onMapClick = onMapClicked;
         function onMapClicked(mx,my,clicked) {
           var lid =  mapObject.currentLevel();
@@ -41,5 +38,8 @@ mapControl.onMapClick = onMapClicked;
 //  Finally,  load  the  map:
 mapDataObject.loadCommunity(24657);
 }
+ if(beacon !== undefined ){
+   mapObject =  mapObject.addMarker(beacon.lat,beacon.lng,mapObject.currentLevel().id,"test",micello.maps.markertype.NAMED);
+ }
   </script>
 <%= render 'form' %>
