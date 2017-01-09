@@ -32,7 +32,6 @@
     micelloHelper.prototype.addMarker = function(posX, posY, lid, beacon_name, type) {
       var marker, markersetting, thislevel;
       thislevel = this.currentLevel();
-      console.log(thislevel);
       markersetting = {
       "mt": type,
       "mr": "BluePin",
@@ -42,7 +41,6 @@
       "idat": beacon_name,
       "anm": "Pins"
     };
-      console.log(markersetting);
       return marker = this.mapObj.addMarkerOverlay(markersetting);
     };
 
