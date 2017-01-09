@@ -22,7 +22,7 @@ function  mapInit()  {
 var  mapControl  =  new  micello.maps.MapControl('beacon-map');
 window.mapDataObject  =  mapControl.getMapData();
  mapObject = new micelloHelper(mapDataObject);
- if(beacon.length > 0){
+ if(beacon !== undefined ){
    mapObject =  mapObject.addMarker(beacon.lat,beacon.lng,lid.id,"test",micello.maps.markertype.NAMED);
  }
 mapControl.onMapClick = onMapClicked;
