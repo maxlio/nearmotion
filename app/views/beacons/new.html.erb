@@ -19,8 +19,8 @@ window.mapDataObject  =  mapControl.getMapData();
 mapControl.onMapClick = onMapClicked;
         function onMapClicked(mx,my,clicked) {
           var lid =  mapObject.currentLevel();
-              var currentMarkers = mapObject.currentLevel().m;
-              if(currentMarkers.length > 0){
+          var currentMarkers = mapObject.currentLevel().m;
+              if(currentMarkers !== undefined){
                 mapObject.clearAll();
               }
             if(mx && my){
