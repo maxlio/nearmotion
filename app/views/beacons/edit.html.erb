@@ -25,7 +25,6 @@ window.mapDataObject  =  mapControl.getMapData();
  if(beacon.length > 0){
    mapObject =  mapObject.addMarker(beacon.lat,beacon.lng,lid.id,"test",micello.maps.markertype.NAMED);
  }
- mapObject.addMarker(mx,my,lid.id,"test",micello.maps.markertype.NAMED);
 mapControl.onMapClick = onMapClicked;
         function onMapClicked(mx,my,clicked) {
           var lid =  mapObject.currentLevel();
