@@ -15,7 +15,7 @@
 <script>
   var lng;
   var lat;
-  console.log(<%= @beacon.lng %>);
+  console.log(<%= if @beacon.lng.nil? puts "null" %>);
   console.log(<%= @beacon.lat %>);
  /* var beacon = {
     lng:<%= @beacon.lng %>,
