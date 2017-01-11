@@ -13,14 +13,12 @@
   </span>
 <% end %>
 <script>
-  var lng;
-  var lat;
-  console.log(<%= if @beacon.lng.nil? puts "null" %>);
-  console.log(<%= @beacon.lat %>);
- /* var beacon = {
-    lng:<%= @beacon.lng %>,
-    lat:<%= @beacon.lat %>
-  }*/
+  var lng = $("#beacon_lng").val();
+  var lat = $("#becon_lat").val();
+ var beacon = {
+    lng:lng,
+    lat:lat
+  }
   var mapControl;
   var mapObject;
 micello.maps.init("rrVDMQe2qjBRuJP5dXv59kAeK77SD7",mapInit);
