@@ -13,6 +13,10 @@
   </span>
 <% end %>
 <script>
+  var lng = <%= @beacon.lng %>;
+  var lat = <%= @beacon.lat %>;
+  console.log(lng);
+  console.log(lat);
   var beacon = {
     lng:<%= @beacon.lng %>,
     lat:<%= @beacon.lat %>
