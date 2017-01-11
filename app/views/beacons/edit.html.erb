@@ -13,14 +13,12 @@
   </span>
 <% end %>
 <script>
-  $(function (){
-  var lng = $("#beacon_lng").val().toString();
-  var lat = $("#becon_lat").val().toString();
- 
+  var lng = $("#beacon_lng").val();
+  var lat = $("#becon_lat").val();
  var beacon = {
     lng:lng,
     lat:lat
-  };
+  }
   var mapControl;
   var mapObject;
 micello.maps.init("rrVDMQe2qjBRuJP5dXv59kAeK77SD7",mapInit);
@@ -49,6 +47,6 @@ mapDataObject.loadCommunity(24657);
    if(beacon !== undefined ){
    mapObject.addMarker(beacon.lat,beacon.lng,mapObject.currentLevel().id,"test",micello.maps.markertype.NAMED);
  }
- }});
+ }
   </script>
 <%= render 'form' %>
