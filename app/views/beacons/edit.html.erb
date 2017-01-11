@@ -13,17 +13,10 @@
   </span>
 <% end %>
 <script>
-  var lat = <%= @beacon.lat %>;
-  var lng = <%= @beacon.lng %>;
   var beacon = {
-    lng:null,
-    lat:null
+    lng:<%= @beacon.lng %>,
+    lat:<%= @beacon.lat %>
   }
-  if(lat && lng )
-  beacon = {
-    lng:lat,
-    lat:lng
-  };
   var mapControl;
   var mapObject;
 micello.maps.init("rrVDMQe2qjBRuJP5dXv59kAeK77SD7",mapInit);
@@ -49,7 +42,7 @@ mapControl.onMapClick = onMapClicked;
 mapDataObject.loadCommunity(24657);
 }
  function onMapChanged(e){
-   if(beacon.lat != null && beacon.lng != null ){
+   if(beacon !== undefined ){
    mapObject.addMarker(beacon.lat,beacon.lng,mapObject.currentLevel().id,"test",micello.maps.markertype.NAMED);
  }
  }
