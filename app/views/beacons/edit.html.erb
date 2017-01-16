@@ -13,11 +13,10 @@
   </span>
 <% end %>
 <script>
-  var lng = $("#beacon_lng").val();
-  var lat = $("#becon_lat").val();
+
  var beacon = {
-    lng:lng,
-    lat:lat
+    lng:$("#beacon_lng").val(),
+    lat:$("#becon_lat").val()
   }
   var mapControl;
   var mapObject;
