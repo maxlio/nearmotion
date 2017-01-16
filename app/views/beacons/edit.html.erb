@@ -12,8 +12,10 @@
     <%= @beacon.name %>
   </span>
 <% end %>
+<%= render 'form' %>
 <script>
- $(document).ready(function (){var lat  = $("#beacon_lat").val();
+ $(document).ready(function (){
+  var lat  = $("#beacon_lat").val();
   var lng = $("#beacon_lng").val();
  var beacon = {
     lng:<%= @beacon.lng %> ,
@@ -50,4 +52,3 @@ mapDataObject.loadCommunity(24657);
  }});
   
   </script>
-<%= render 'form' %>
