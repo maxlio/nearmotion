@@ -13,8 +13,8 @@
   </span>
 <% end %>
 <script>
-
- var beacon = {
+$(function (){
+  var beacon = {
     lng:$("#beacon_lng").val().toString(),
     lat:$("#becon_lat").val().toString()
   };
@@ -47,5 +47,7 @@ mapDataObject.loadCommunity(24657);
    mapObject.addMarker(beacon.lat,beacon.lng,mapObject.currentLevel().id,"test",micello.maps.markertype.NAMED);
  }
  }
+});
+ 
   </script>
 <%= render 'form' %>
