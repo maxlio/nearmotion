@@ -29,6 +29,9 @@ class @MicelloMap
       })
     marker = @map.addMarkerOverlay(markerSettings)
     @_markers[markerId] = marker
+  toLngLat:(mapObject,mx,my) ->
+    mapObject.mxyToLatLon(mx,my)
+    
     
     
     
