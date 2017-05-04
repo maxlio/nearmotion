@@ -34,7 +34,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+gem "rack-timeout", require:"rack/timeout/base"
 gem 'active_link_to' # easy way to add class="active"
 
 gem 'beacon_control-base',
