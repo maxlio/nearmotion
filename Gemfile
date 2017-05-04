@@ -14,7 +14,7 @@ gem 'composite_primary_keys'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
-
+gem 'rack-timeout'
 gem 'sprockets', '>= 3.0.0'
 gem 'sprockets-es6', '0.7.0'
 
