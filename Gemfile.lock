@@ -1,11 +1,12 @@
 GIT
-  remote: git://github.com/activeadmin/inherited_resources.git
-  revision: 0839b077a791013e741ea12cb793b6809a007317
+  remote: git://github.com/josevalim/inherited_resources.git
+  revision: ff1c991307ff78cce98882b6986aeabbbcfd70c4
+  branch: rails-4-2
   specs:
-    inherited_resources (1.7.1)
-      actionpack (>= 3.2, < 5.1)
-      has_scope (~> 0.6)
-      railties (>= 3.2, < 5.1)
+    inherited_resources (1.5.1)
+      actionpack (>= 3.2, < 5)
+      has_scope (~> 0.6.0.rc)
+      railties (>= 3.2, < 5)
       responders
 
 PATH
@@ -456,8 +457,6 @@ DEPENDENCIES
   virtus
   web-console (~> 2.0)
 
-RUBY VERSION
-   ruby
 
 BUNDLED WITH
    1.11.2
