@@ -90,7 +90,7 @@ gem 'naught'
 gem 'nested_form'
 gem 'rpush', '~>2.4.0'
 
-gem 'redis-namespace'
+
 gem 'virtus'
 
 gem 'has_scope'
