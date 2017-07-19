@@ -204,7 +204,7 @@ en:
   dashboard:
     index:
       title: 'Home'
-      welcome: 'Welcome to BeaconControl!'
+      welcome: 'Welcome to Qarib!'
       description: "This is the place where you’ll manage your beacon infrastructure and configure actions triggered in your mobile applications. Why don’t you start by adding some beacons? Then you can create your first application, add actions and start monitoring your beacons’ usage."
       beacon_title: 'NEW BEACON'
       beacon_description: "Adding the beacon is fast and easy. Recognize your beacon with UUID, and the major and minor numbers provided by its supplier, and then locate your beacon on the map. Now you're ready to setup actions for it, test it on BeaconControl mobile application and use in further development."
