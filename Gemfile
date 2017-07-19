@@ -3,19 +3,18 @@ source 'https://rubygems.org'
 ruby '2.2.4'
 
 gem 'rails', '4.2.0'
-# gem 'rails', '4.2.6'
 # Use mysql/postgres as the database for Active Record
 
 gem 'pg'
-gem 'mysql2', '~> 0.3.18'
+# gem 'mysql2'
 
 # Active Record composite primary keys support
-gem 'composite_primary_keys', '8.0.0'
+gem 'composite_primary_keys'
 # Use SCSS for stylesheets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
-gem 'sprockets', '>= 3.6.3'
+gem 'sprockets', '>= 3.0.0'
 gem 'sprockets-es6', '0.7.0'
 gem 'gibbon'
 
@@ -84,8 +83,8 @@ gem 'draper', '~>2.0.0'
 gem 'enumerize', '~>0.8.0'
 gem 'faraday', '~>0.9.0'
 gem 'handlebars_assets'
-# gem 'inherited_resources', branch: 'master', github: 'josevalim/inherited_resources'
-gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'inherited_resources', branch: 'rails-4-2', github: 'josevalim/inherited_resources'
+#gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'responders'
 gem 'naught'
 gem 'nested_form'
@@ -112,9 +111,6 @@ gem 'foreman'
 gem 'rack-cors', :require => 'rack/cors'
 
 gem 'premailer-rails'
-gem 'redis-namespace'
-gem 'request_store'
-gem 'friendly_id'
 
 group :development, :test do
   gem 'pry'
@@ -144,7 +140,6 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  gem 'better_errors'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
