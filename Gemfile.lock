@@ -342,7 +342,6 @@ GEM
       redis (~> 3.3, >= 3.3.3)
     sidekiq-status (0.6.0)
       sidekiq (>= 2.7)
-    simple_form (3.5.0)
       actionpack (> 4, < 5.2)
       activemodel (> 4, < 5.2)
     sinatra (1.4.8)
@@ -456,7 +455,6 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   sidekiq
   sidekiq-status
-  simple_form
   sinatra
   spring
   sprockets (>= 3.6.3)
