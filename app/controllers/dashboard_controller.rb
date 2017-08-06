@@ -13,7 +13,7 @@ class DashboardController < AdminController
 
   def index
     @walkthrough = !current_admin.walkthrough
-    current_admin.update_attribute(:walkthrough, true)
+    current_admin.update_attribute(:walkthrough, false)
   end
 
   private
