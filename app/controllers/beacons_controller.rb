@@ -29,6 +29,7 @@ class BeaconsController < AdminController
   end
 
   def index
+    params.reverse_merge!({"sorted"=>{"column"=>"beacons.name", "direction"=>"asc"} })
     @beacons = BeaconDecorator.decorate_collection apply_scopes(collection).all
     index!
   end
