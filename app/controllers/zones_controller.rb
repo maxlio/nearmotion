@@ -8,7 +8,7 @@
 
 class ZonesController < AdminController
   inherit_resources
-  load_and_authorize_resource
+  load_and_authorize_resource param_method: Proc.new { |c| c.params.require(:zone).permit(:id) }
 
   actions :index, :new, :edit, :update, :destroy
 

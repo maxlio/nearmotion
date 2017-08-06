@@ -83,8 +83,8 @@ gem 'draper', '~>2.0.0'
 gem 'enumerize', '~>0.8.0'
 gem 'faraday', '~>0.9.0'
 gem 'handlebars_assets'
-gem 'inherited_resources', branch: 'rails-4-2', github: 'josevalim/inherited_resources'
-#gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+# gem 'inherited_resources', branch: 'rails-4-2', github: 'josevalim/inherited_resources'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'responders'
 gem 'naught'
 gem 'nested_form'
@@ -98,7 +98,7 @@ gem 'has_scope'
 # QRCode extension for Barby
 gem 'rqrcode'
 
-gem 'simple_form', '~> 3.0.0.rc'
+gem 'simple_form'
 
 gem "deep_merge", :require => 'deep_merge/rails_compat'
 

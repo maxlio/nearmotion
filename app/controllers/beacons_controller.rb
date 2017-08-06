@@ -8,7 +8,7 @@
 
 class BeaconsController < AdminController
   inherit_resources
-  load_and_authorize_resource
+  load_and_authorize_resource param_method: Proc.new { |c| c.params.require(:beacon).permit(:id) }
   custom_actions collection: :batch_update
   before_action :load_and_authorize_zones
   before_action :build_test_activity, only: [:new, :create, :edit, :update]
