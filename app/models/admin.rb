@@ -16,11 +16,11 @@ class Admin < ActiveRecord::Base
   if AppConfig.registerable
     devise :database_authenticatable, :registerable,
            :rememberable, :trackable, :validatable,
-           :confirmable, :recoverable, :password_archivable
+           :recoverable, :password_archivable
   else
     devise :database_authenticatable,
            :rememberable, :trackable, :validatable,
-           :confirmable, :recoverable, :password_archivable
+           :recoverable, :password_archivable
   end
 
   enum role: [:admin, :beacon_manager]
@@ -60,7 +60,7 @@ class Admin < ActiveRecord::Base
   scope :with_email, ->(email) { where('email LIKE ?', "%#{email}%") }
 
   after_create do
-    confirm! if !confirmed?
+    # confirm! if !confirmed?
   end
 
   validates :password, confirmation: true, on: :update, if: -> { password.present? }
