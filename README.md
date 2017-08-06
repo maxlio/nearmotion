@@ -15,7 +15,7 @@ Setup your own BeaconControl server (e.g to extend its functionality or to use `
 The easiest way to deploy own BeaconControl server is to deploy BeaconControl to Heroku using Heroku Button.
 Just click on the button bellow and you will be passed through application setup flow on Heroku.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/upnext/BeaconControl/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/maxlio/nearmotion/tree/master)
 
 
 If you prefer to start development on your local machine just you use the following command:
